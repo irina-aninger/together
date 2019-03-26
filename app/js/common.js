@@ -7,7 +7,7 @@ onload = function () {
     onresize = function () {
         div.style.height = window.innerHeight - header.offsetHeight + "px";
     };
-}
+};
 
 $(document).ready(function () {
     $('#gallery').slick({
@@ -18,9 +18,18 @@ $(document).ready(function () {
         arrows: false
     });
 
-    $('a[href^="#"]').click(function () {
+    /*$('a[href^="#"]').click(function () {
         var target = $(this).attr('href');
         $('html, body').animate({scrollTop: $(target).offset().top - header.offsetHeight}, 800);
+        return false;
+    });*/
+
+    $('a[href^="#"]').on("click", function(e){
+        var anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $(anchor.attr('href')).offset().top - header.offsetHeight
+        }, 800);
+        e.preventDefault();
         return false;
     });
 

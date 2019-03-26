@@ -315,6 +315,7 @@ form
     width: 50%
     position: relative
     float: left
+    overflow: hidden
     .hidden-desc
       position: absolute
       transition: .3s
@@ -338,7 +339,7 @@ form
         transition: translateX(-50%)
         margin: auto
         text-align: center
-        height: 100px
+        height: fit-content
         width: 100%
     &:hover
       .hidden-desc
@@ -382,6 +383,9 @@ form
 @media only screen and (max-width: 992px)
   .row
     width: 750px
+  nav
+    li
+      padding: 0 5px
   h1
     font: 90px 'Times New Roman', sans-serif
 
@@ -390,6 +394,66 @@ form
     width: auto
   h1
     font: 64px 'Times New Roman', sans-serif
+  .logo
+    padding-left: 23px
+  .mobile-menu
+    cursor: pointer
+    height: 100%
+    width: 35px
+    float: right
+    .burger
+      background: #3dcab3
+      height: 3px
+      width: 35px
+      float: right
+      position: relative
+      margin: 23px
+      &::before
+        content: ''
+        background: #3dcab3
+        height: 3px
+        width: 35px
+        position: absolute
+        top: -9px
+        right: 0px
+      &::after
+        content: ''
+        background: #3dcab3
+        height: 3px
+        width: 35px
+        position: absolute
+        top: 9px
+        right: 0px
+  #club
+    ul
+      column-count: 2
+      padding: 0
+      li
+        text-align: center
+        height: 100px
+        .fa
+          display: block
+          margin: 0 auto
+        span
+          margin-top: 10px
+          width: 90%
+  .about-text
+    width: 60%
+  nav
+    display: none
+
+  #platform-items
+    .plat-item
+      height: 150px
+      width: 100%
+      img
+        position: absolute
+        top: -113%
+      .hidden-desc
+        display: block
+        span
+          font-size: 24px
+
 
 @media only screen and (max-width: 420px)
   .row
