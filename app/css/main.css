@@ -192,7 +192,13 @@ footer {
 #banner .banner-text {
   text-align: center;
   color: #fff;
-  margin-top: 25%; }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
   #banner .banner-text p {
     font: 19px 'Open Sans', sans-serif;
     letter-spacing: 0.45em;

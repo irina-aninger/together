@@ -23,5 +23,14 @@ $('#gallery').slick({
     var highestCol = Math.max(mainSection.marginTop(),header.height());
     mainSection.marginTop(highestCol);
 
+    onload = function() {
+        var div  = document.getElementById("nav");
+        var html = document.documentElement;
+        div.style.width = window.innerHeight + "px";
+
+        onresize = function() {
+            div.style.width = window.innerHeight + "px";
+        };
+    }
 
 });
