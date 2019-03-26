@@ -89,7 +89,6 @@ p {
 
 header {
   background: #212121;
-  position: fixed;
   width: 100%;
   padding: 3px 0;
   top: 0;
@@ -101,7 +100,7 @@ header {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
-  overflow: auto;
+  overflow: hidden;
   position: relative;
   text-align: center; }
 
@@ -246,15 +245,16 @@ footer {
 
 #platform {
   background: #3ECCB5;
-  padding: 40px 0 50px 0; }
+  padding: 65px 0 75px 0; }
   #platform h2 {
     color: #fff; }
 
 #community {
-  padding: 65px 0 85px 0; }
+  padding: 65px 0 75px 0; }
 
 #club {
-  clear: both; }
+  clear: both;
+  padding: 65px 0 75px 0; }
   #club ul {
     -webkit-column-count: 3;
        -moz-column-count: 3;
@@ -315,11 +315,11 @@ form button {
   font-size: 15px;
   padding: 11px 46px !important; }
 
-#platform .plat-item {
+#platform-items .plat-item {
   width: 50%;
   position: relative;
   float: left; }
-  #platform .plat-item .hidden-desc {
+  #platform-items .plat-item .hidden-desc {
     position: absolute;
     -webkit-transition: .3s;
     -o-transition: .3s;
@@ -331,7 +331,7 @@ form button {
     top: 0;
     left: 0;
     display: none; }
-    #platform .plat-item .hidden-desc span {
+    #platform-items .plat-item .hidden-desc span {
       position: absolute;
       top: 0;
       left: 0;
@@ -348,7 +348,7 @@ form button {
       text-align: center;
       height: 100px;
       width: 100%; }
-  #platform .plat-item:hover .hidden-desc {
+  #platform-items .plat-item:hover .hidden-desc {
     display: block;
     -webkit-transition: 1s;
     -o-transition: 1s;
