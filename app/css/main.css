@@ -407,6 +407,11 @@ form button {
     width: auto; }
   h1 {
     font: 64px 'Times New Roman', sans-serif; }
+  header .container {
+    overflow: visible; }
+    header .container nav {
+      position: absolute;
+      background: #212121; }
   .logo {
     padding-left: 23px; }
   .mobile-menu {
@@ -470,4 +475,10 @@ form button {
   .row {
     width: auto; }
   h1 {
-    font: 52px 'Times New Roman', sans-serif; } }
+    font: 52px 'Times New Roman', sans-serif; }
+  #club ul {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1; }
+    #club ul li {
+      height: auto; } }
