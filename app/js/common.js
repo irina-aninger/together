@@ -39,7 +39,7 @@ $(document).ready(function () {
         return false;
     });*/
 
-    $('a[href^="#"]').on("click", function(e){
+    $('a[href^="#"]').on("click", function (e) {
         var anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $(anchor.attr('href')).offset().top - header.offsetHeight
@@ -58,4 +58,17 @@ $(document).ready(function () {
             $('#banner').css('marginTop', '0')
         }
     });
+
+    var mobileMenu = function() {
+
+        $('.mobile-menu').click(function() {
+            $('nav').animate({
+                left: '0px'
+            }, 300);
+            $('.mobile-menu').addClass('close');
+        });
+    };
+
+    $(document).ready(mobileMenu);
+
 });

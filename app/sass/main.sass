@@ -396,7 +396,6 @@ form
     font: 64px 'Times New Roman', sans-serif
   header
     .container
-      overflow: visible
       nav
         position: absolute
         background: #212121
@@ -406,7 +405,7 @@ form
   .mobile-menu
     cursor: pointer
     height: 100%
-    width: 35px
+    width: 85px
     float: right
     .burger
       background: #3dcab3
@@ -447,7 +446,11 @@ form
   .about-text
     width: 60%
   nav
-    display: none
+    right: 100%
+    width: 100%
+    z-index: 200
+    li
+      display: block
 
   #platform-items
     .plat-item

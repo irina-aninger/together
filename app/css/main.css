@@ -407,17 +407,15 @@ form button {
     width: auto; }
   h1 {
     font: 64px 'Times New Roman', sans-serif; }
-  header .container {
-    overflow: visible; }
-    header .container nav {
-      position: absolute;
-      background: #212121; }
+  header .container nav {
+    position: absolute;
+    background: #212121; }
   .logo {
     padding-left: 23px; }
   .mobile-menu {
     cursor: pointer;
     height: 100%;
-    width: 35px;
+    width: 85px;
     float: right; }
     .mobile-menu .burger {
       background: #3dcab3;
@@ -459,7 +457,11 @@ form button {
   .about-text {
     width: 60%; }
   nav {
-    display: none; }
+    right: 100%;
+    width: 100%;
+    z-index: 200; }
+    nav li {
+      display: block; }
   #platform-items .plat-item {
     height: 150px;
     width: 100%; }
