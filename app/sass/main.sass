@@ -84,6 +84,7 @@ body
   width: 100%
   height: 100%
   margin: 0
+  position: relative
 
 h1, h2, h3
   font-family: 'Times New Roman', sans-serif
@@ -101,6 +102,21 @@ header
   padding: 3px 0
   top: 0
   z-index: 100
+
+.open-header
+  position: fixed
+  width: 180px
+  height: 100%
+  .logo
+    padding-left: 5px
+  nav
+    display: block !important
+    ul
+      padding: 0
+      li
+        display: block
+        text-align: left
+        padding: 3px 5px
 
 .header-fixed
   position: fixed
@@ -123,8 +139,9 @@ a
   transition: color .4s
   cursor: pointer
   color: #fff
+
   &:hover
-      color: #3ECCB5
+    color: #3ECCB5
 
 li
   list-style: none
@@ -160,6 +177,9 @@ nav li
   display: inline-block
   padding: 0 10px
 
+  &:last-child
+    padding-right: 0
+
 .logo
   color: #fff
   float: left
@@ -175,18 +195,33 @@ nav li
 footer
   background: #333333
 
+  .social
+    display: inline-flex
+    float: right
+    margin: 29px 0
+
+    li
+      padding-left: 16px
+
+      img
+        width: 26px
+
   p
     color: #BAB8B8
     letter-spacing: 0.1em
     font-size: 14px
-    margin: 0
+    margin: 32px 0
+    float: left
 
 #banner
+  img
+    object-fit: cover
+    height: 100%
   .overlay
     position: absolute
     top: 0
     left: 0
-    background-color: #00000061
+    background-color: rgba(0, 0, 0, 0.3803921568627451)
     height: 100%
     width: 100%
     right: 0
@@ -200,7 +235,7 @@ footer
     top: 50%
     left: 50%
     margin: 0 auto
-    transform: translate(-50%,-50%)
+    transform: translate(-50%, -50%)
 
     p
       font: 19px 'Open Sans', sans-serif
@@ -254,6 +289,7 @@ footer
 #club
   clear: both
   padding: 65px 0 75px 0
+
   ul
     column-count: 3
 
@@ -275,18 +311,21 @@ footer
           color: #3ECCB5
 
 #feedback
-  background: #3e3b3b99 url(../img/feedback.jpg) no-repeat
+  background: #3e3b3b94 url(../img/feedback.jpg) no-repeat
   -webkit-background-size: cover
   background-size: cover
   background-attachment: fixed
   background-blend-mode: hue
   padding: 70px 0 85px 0
+
   h2
     color: #fff
+
   p
     font: 16px 'Open Sans', sans-serif
     text-transform: uppercase
     letter-spacing: 0.05em
+
     &:nth-child(4)
       text-transform: none
       padding-top: 80px
@@ -301,9 +340,11 @@ form
     color: #fff
     border: 0
     transition: .3s
+
     &:focus
       box-shadow: 0 0 5px 2px #ffffffa6
-      outline: none;
+      outline:none
+
   button
     width: 350px
     text-transform: none !important
@@ -316,16 +357,18 @@ form
     position: relative
     float: left
     overflow: hidden
+
     .hidden-desc
       position: absolute
       transition: .3s
       width: 100%
       height: 100%
-      background: #3333338f
+      background: rgba(0, 0, 0, 0.3803921568627451)
       z-index: 50
       top: 0
       left: 0
       display: none
+
       span
         position: absolute
         top: 0
@@ -341,6 +384,7 @@ form
         text-align: center
         height: fit-content
         width: 100%
+
     &:hover
       .hidden-desc
         display: block
@@ -349,6 +393,23 @@ form
 #gallery
   .gallery-item
     padding: 10px 5px
+
+.mobile-menu.close
+  width: 85px
+  position: absolute
+  z-index: 300
+  right: 0
+  height: auto
+  .burger
+    background: none
+    &::before
+      top: 0
+      transform: rotate(45deg)
+      width: 25px
+    &::after
+      top: 0
+      transform: rotate(135deg)
+      width: 25px
 
 .fa
   height: 50px
@@ -392,13 +453,14 @@ form
 @media only screen and (max-width: 768px)
   .row
     width: auto
+  .container
+    padding: 0 15px
   h1
     font: 64px 'Times New Roman', sans-serif
   header
     .container
       nav
-        position: absolute
-        background: #212121
+        display: none
 
   .logo
     padding-left: 23px
@@ -407,6 +469,7 @@ form
     height: 100%
     width: 85px
     float: right
+
     .burger
       background: #3dcab3
       height: 3px
@@ -414,6 +477,7 @@ form
       float: right
       position: relative
       margin: 23px
+
       &::before
         content: ''
         background: #3dcab3
@@ -422,6 +486,7 @@ form
         position: absolute
         top: -9px
         right: 0px
+
       &::after
         content: ''
         background: #3dcab3
@@ -430,16 +495,24 @@ form
         position: absolute
         top: 9px
         right: 0px
+  #banner
+    .container
+      padding: 0
+    img
+
   #club
     ul
       column-count: 2
       padding: 0
+
       li
         text-align: center
         height: 100px
+
         .fa
           display: block
           margin: 0 auto
+
         span
           margin-top: 10px
           width: 90%
@@ -449,18 +522,22 @@ form
     right: 100%
     width: 100%
     z-index: 200
+
     li
-      display: block
+      display: inline-block
 
   #platform-items
     .plat-item
       height: 150px
       width: 100%
+
       img
         position: absolute
         top: -113%
+
       .hidden-desc
         display: block
+
         span
           font-size: 24px
 
@@ -473,6 +550,7 @@ form
   #club
     ul
       column-count: 1
+
       li
         height: auto
 
