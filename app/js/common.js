@@ -33,12 +33,6 @@ $(document).ready(function () {
         ]
     });
 
-    /*$('a[href^="#"]').click(function () {
-        var target = $(this).attr('href');
-        $('html, body').animate({scrollTop: $(target).offset().top - header.offsetHeight}, 800);
-        return false;
-    });*/
-
     $('a[href^="#"]').on("click", function (e) {
         var anchor = $(this);
         $('html, body').stop().animate({
@@ -91,3 +85,16 @@ $(document).ready(function () {
     $(document).ready(mobileMenu);
 
 });
+
+//Animation
+wow = new WOW(
+    {
+        boxClass:     'wow',      // default
+        animateClass: 'animated', // default
+        offset:       0,          // default
+        mobile:       true,       // default
+        live:         true        // default
+    }
+)
+wow.init();
+//End animation
