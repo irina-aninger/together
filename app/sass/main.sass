@@ -306,6 +306,13 @@ footer
       width: 100%
       margin: 20px 0
 
+      &:hover
+        span
+          color: #3ECCB5
+
+        .fa
+          transform: scaleX(-1)
+
       span
         font-size: 15px
         display: inline-block
@@ -313,9 +320,6 @@ footer
         width: 75%
         transition: .3s
         cursor: pointer
-
-        &:hover
-          color: #3ECCB5
 
 #feedback
   background: #3e3b3b94 url(../img/feedback.jpg) no-repeat
@@ -359,6 +363,7 @@ form
     padding: 11px 46px !important
 
 #platform-items
+  overflow: hidden
   .plat-item
     width: 50%
     position: relative
@@ -377,7 +382,7 @@ form
       transition: .3s
       width: 100%
       height: 100%
-      background: rgba(0, 0, 0, 0.3803921568627451)
+      background: rgba(0, 0, 0, 0.54)
       z-index: 50
       top: 0
       left: 0
@@ -435,10 +440,7 @@ form
   display: inline-block
   vertical-align: middle
   margin-right: 15px
-  transition: .6s
-
-  &:hover
-    transform: translateX(-15px) rotate(-90deg)
+  transition: .4s
 
 .fa-work
   background: url("../img/stick-man.svg")

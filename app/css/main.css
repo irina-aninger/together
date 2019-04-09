@@ -312,6 +312,12 @@ footer {
       display: inline-block;
       width: 100%;
       margin: 20px 0; }
+      #club ul li:hover span {
+        color: #3ECCB5; }
+      #club ul li:hover .fa {
+        -webkit-transform: scaleX(-1);
+            -ms-transform: scaleX(-1);
+                transform: scaleX(-1); }
       #club ul li span {
         font-size: 15px;
         display: inline-block;
@@ -321,8 +327,6 @@ footer {
         -o-transition: .3s;
         transition: .3s;
         cursor: pointer; }
-        #club ul li span:hover {
-          color: #3ECCB5; }
 
 #feedback {
   background: #3e3b3b94 url(../img/feedback.jpg) no-repeat;
@@ -362,61 +366,63 @@ form button {
   font-size: 15px;
   padding: 11px 46px !important; }
 
-#platform-items .plat-item {
-  width: 50%;
-  position: relative;
-  float: left;
-  overflow: hidden;
-  -webkit-transition: .8s;
-  -o-transition: .8s;
-  transition: .8s; }
-  #platform-items .plat-item:hover img {
-    -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-            transform: scale(1.1); }
-  #platform-items .plat-item img {
-    -webkit-transition: 1s;
-    -o-transition: 1s;
-    transition: 1s; }
-  #platform-items .plat-item .hidden-desc {
-    position: absolute;
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.380392);
-    z-index: 50;
-    top: 0;
-    left: 0;
-    display: none;
+#platform-items {
+  overflow: hidden; }
+  #platform-items .plat-item {
+    width: 50%;
+    position: relative;
+    float: left;
+    overflow: hidden;
     -webkit-transition: .8s;
     -o-transition: .8s;
     transition: .8s; }
-    #platform-items .plat-item .hidden-desc span {
+    #platform-items .plat-item:hover img {
+      -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+              transform: scale(1.1); }
+    #platform-items .plat-item img {
+      -webkit-transition: 1s;
+      -o-transition: 1s;
+      transition: 1s; }
+    #platform-items .plat-item .hidden-desc {
       position: absolute;
+      -webkit-transition: .3s;
+      -o-transition: .3s;
+      transition: .3s;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.54);
+      z-index: 50;
       top: 0;
       left: 0;
-      right: 0;
-      bottom: 0;
-      font-size: 44px;
-      text-transform: uppercase;
-      color: #fff;
-      font-family: Georgia, sans-serif;
-      -webkit-transition: translateX(-50%);
-      -o-transition: translateX(-50%);
-      transition: translateX(-50%);
-      margin: auto;
-      text-align: center;
-      height: -webkit-fit-content;
-      height: -moz-fit-content;
-      height: fit-content;
-      width: 100%; }
-  #platform-items .plat-item:hover .hidden-desc {
-    display: block;
-    -webkit-transition: 1s;
-    -o-transition: 1s;
-    transition: 1s; }
+      display: none;
+      -webkit-transition: .8s;
+      -o-transition: .8s;
+      transition: .8s; }
+      #platform-items .plat-item .hidden-desc span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        font-size: 44px;
+        text-transform: uppercase;
+        color: #fff;
+        font-family: Georgia, sans-serif;
+        -webkit-transition: translateX(-50%);
+        -o-transition: translateX(-50%);
+        transition: translateX(-50%);
+        margin: auto;
+        text-align: center;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+        width: 100%; }
+    #platform-items .plat-item:hover .hidden-desc {
+      display: block;
+      -webkit-transition: 1s;
+      -o-transition: 1s;
+      transition: 1s; }
 
 #gallery .gallery-item {
   padding: 10px 5px; }
@@ -450,13 +456,9 @@ form button {
   display: inline-block;
   vertical-align: middle;
   margin-right: 15px;
-  -webkit-transition: .6s;
-  -o-transition: .6s;
-  transition: .6s; }
-  .fa:hover {
-    -webkit-transform: translateX(-15px) rotate(-90deg);
-        -ms-transform: translateX(-15px) rotate(-90deg);
-            transform: translateX(-15px) rotate(-90deg); }
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s; }
 
 .fa-work {
   background: url("../img/stick-man.svg"); }
