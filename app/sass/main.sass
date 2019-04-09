@@ -107,6 +107,9 @@ header
   position: fixed
   width: 180px
   height: 100%
+  background: #212121
+  display: block !important
+  margin-top: -3px
   .logo
     padding-left: 5px
   nav
@@ -170,12 +173,12 @@ img
 
 header nav
   float: right
-  animation-duration: 1s
-  animation-name: fadeInDown
 
 nav li
   display: inline-block
   padding: 0 10px
+  animation-duration: 1s
+  animation-name: fadeInDown
 
   &:last-child
     padding-right: 0
@@ -205,6 +208,10 @@ footer
 
       img
         width: 26px
+        transition: .6s
+
+        &:hover
+          transform: rotate(360deg)
 
   p
     color: #BAB8B8
@@ -357,6 +364,13 @@ form
     position: relative
     float: left
     overflow: hidden
+    transition: .8s
+    &:hover
+      img
+        transform: scale(1.1)
+
+    img
+      transition: 1s
 
     .hidden-desc
       position: absolute
@@ -368,6 +382,7 @@ form
       top: 0
       left: 0
       display: none
+      transition: .8s
 
       span
         position: absolute
@@ -407,11 +422,11 @@ form
     &::before
       top: 0
       transform: rotate(45deg)
-      width: 25px
+      width: 30px
     &::after
       top: 0
       transform: rotate(135deg)
-      width: 25px
+      width: 30px
 
 .fa
   height: 50px
@@ -420,6 +435,10 @@ form
   display: inline-block
   vertical-align: middle
   margin-right: 15px
+  transition: .6s
+
+  &:hover
+    transform: translateX(-15px) rotate(-90deg)
 
 .fa-work
   background: url("../img/stick-man.svg")
@@ -480,6 +499,10 @@ form
       position: relative
       margin: 23px
 
+
+      &:hover
+        transform: rotate(180deg)
+
       &::before
         content: ''
         background: #3dcab3
@@ -488,6 +511,7 @@ form
         position: absolute
         top: -9px
         right: 0px
+        transition: 0.4s cubic-bezier(0.01, 0.33, 1, 1)
 
       &::after
         content: ''
@@ -497,6 +521,7 @@ form
         position: absolute
         top: 9px
         right: 0px
+        transition: 0.4s cubic-bezier(0.01, 0.33, 1, 1)
   #banner
     .container
       padding: 0
@@ -521,12 +546,17 @@ form
   .about-text
     width: 60%
   nav
-    right: 100%
+    right: -180px;
     width: 100%
     z-index: 200
 
-    li
-      display: inline-block
+    ul
+      padding: 0px 25px
+
+      li
+        display: block
+        text-align: left
+        padding-bottom: 10px
 
   #platform-items
     .plat-item
@@ -535,7 +565,8 @@ form
 
       img
         position: absolute
-        top: -113%
+        top: -100%
+        transition: .5s
 
       .hidden-desc
         display: block
@@ -555,4 +586,15 @@ form
 
       li
         height: auto
+  footer
+    p
+      float: none
+      margin-bottom: 0
+    .social
+      float: none
+      padding: 0
+      li
+        &:first-child
+          padding: 0
+
 

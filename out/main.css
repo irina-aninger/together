@@ -1,4 +1,3 @@
-@import url(../libs/owl-carousel/dist/assets/owl.carousel.css);
 /*! HTML5 Boilerplate v7.0.1 | MIT License | https://html5boilerplate.com/ */
 /* main.css 1.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
 /*
@@ -60,7 +59,9 @@ body {
   line-height: 1.5;
   background-color: #f9fafa;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  margin: 0;
+  position: relative; }
 
 h1 {
   font-family: 'Times New Roman', sans-serif;

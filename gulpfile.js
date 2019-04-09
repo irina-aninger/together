@@ -47,7 +47,6 @@ gulp.task('code', function() {
 gulp.task('css-libs', function() {
     return gulp.src('app/css/*.css') // Выбираем файл для минификации
         .pipe(cssnano()) // Сжимаем
-        .pipe(rename({suffix: '.min'})) // Добавляем суффикс .min
         .pipe(gulp.dest('app/css')); // Выгружаем в папку app/css
 });
 

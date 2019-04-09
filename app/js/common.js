@@ -56,29 +56,25 @@ $(document).ready(function () {
     var mobileMenu = function() {
 
         $('.mobile-menu').click(function() {
-            $('header').removeClass('header-fixed');
-            $('header').addClass('open-header');
-            $('header').animate({
-                right: '0px'
-            }, 300);
-            $('.mobile-menu').addClass('close');
-            $('body').animate({ //выбираем тег body и метод animate
-
-                right: '180px' /* чтобы всё содержимое также сдвигалось вправо
-               при открытии меню, установим ему положение 285px */
-
-            }, 300); //скорость движения меню в мс
-        });
-        $('.mobile-menu.close').click(function() {
-            $('nav').animate({
-                right: '180px'
-            }, 350);
-            $('.mobile-menu').removeClass('close');
-            $('body').animate({ //выбираем тег body и метод animate
-
-                right: '0px' //а содержимое страницы снова вернется в положение 0px
-
-            }, 350); //скорость движения меню в мс
+            if ($(this).hasClass('close')) {
+                $('header nav').animate({
+                    right: '-180px'
+                }, 350);
+                //$('header nav').removeClass('open-header');
+                $(this).removeClass('close');
+                $('body').animate({
+                    right: '0px'
+                }, 350);
+            } else {
+                $('.mobile-menu').addClass('close');
+                $('header nav').addClass('open-header');
+                $('header nav').animate({
+                    right: '0px'
+                }, 350);
+                $('body').animate({
+                    right: '180px'
+                }, 350);
+            }
         });
     };
 
@@ -95,6 +91,6 @@ wow = new WOW(
         mobile:       true,       // default
         live:         true        // default
     }
-)
+);
 wow.init();
 //End animation
