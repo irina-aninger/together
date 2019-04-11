@@ -1,14 +1,13 @@
 //Preloader
 $(window).on('load', function () {
-    var $preloader = $('#preload');
+    const $preloader = $('#preload');
     $preloader.delay(600).fadeOut('slow');
 });
 //Preloader end
 
 onload = function () {
-    var div = document.getElementById("banner");
-    var header = document.getElementById("header");
-    var html = document.documentElement;
+    const div = document.getElementById("banner");
+    const header = document.getElementById("header");
     div.style.height = window.innerHeight - header.offsetHeight + "px";
 
     onresize = function () {
@@ -41,7 +40,7 @@ $(document).ready(function () {
     });
 
     $('a[href^="#"]').on("click", function (e) {
-        var anchor = $(this);
+        const anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $(anchor.attr('href')).offset().top - header.offsetHeight
         }, 800);
@@ -50,7 +49,7 @@ $(document).ready(function () {
     });
 
     $(window).scroll(function () {
-        var height = $(window).scrollTop();
+        const height = $(window).scrollTop();
         if (height > 1) {
             $('header').addClass('header-fixed');
             $('#banner').css('marginTop', header.offsetHeight)
@@ -60,7 +59,7 @@ $(document).ready(function () {
         }
     });
 
-    var mobileMenu = function () {
+    const mobileMenu = function () {
 
         $('.mobile-menu').click(function () {
             if ($(this).hasClass('close')) {
