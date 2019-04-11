@@ -110,12 +110,16 @@ header
   background: #212121
   display: block !important
   margin-top: -3px
+
   .logo
     padding-left: 5px
+
   nav
     display: block !important
+
     ul
       padding: 0
+
       li
         display: block
         text-align: left
@@ -157,8 +161,6 @@ h1
   letter-spacing: 0.06em
   font-weight: bold
   margin: 0
-  animation-duration: 5s
-  animation-name: fadeIn
 
 h2
   font-size: 46px
@@ -224,6 +226,7 @@ footer
   img
     object-fit: cover
     height: 100%
+
   .overlay
     position: absolute
     top: 0
@@ -249,8 +252,6 @@ footer
       letter-spacing: 0.45em
       text-transform: uppercase
       margin-bottom: 50px
-      animation-duration: 5s
-      animation-name: fadeIn
 
 .button
   background: #3DCAB3
@@ -261,8 +262,7 @@ footer
   transition: .4s
   cursor: pointer
   margin: 15px
-  animation-duration: 5s
-  animation-name: fadeIn
+  position: relative
 
   &:hover
     background: #298879
@@ -322,7 +322,7 @@ footer
         cursor: pointer
 
 #feedback
-  background: #3e3b3b94 url(../img/feedback.jpg) no-repeat
+  background: #3e3b3b 94 url(../img/feedback.jpg) no-repeat
   -webkit-background-size: cover
   background-size: cover
   background-attachment: fixed
@@ -354,6 +354,7 @@ form
 
     &:focus
       box-shadow: 0 0 5px 2px #ffffffa6
+
       outline:none
 
   button
@@ -364,12 +365,14 @@ form
 
 #platform-items
   overflow: hidden
+
   .plat-item
     width: 50%
     position: relative
     float: left
     overflow: hidden
     transition: .8s
+
     &:hover
       img
         transform: scale(1.1)
@@ -415,19 +418,21 @@ form
     padding: 10px 5px
 
 
-
 .mobile-menu.close
   width: 85px
   position: absolute
   z-index: 300
   right: 0
   height: auto
+
   .burger
     background: none
+
     &::before
       top: 0
       transform: rotate(45deg)
       width: 30px
+
     &::after
       top: 0
       transform: rotate(135deg)
@@ -527,6 +532,7 @@ form
   #banner
     .container
       padding: 0
+
     img
 
   #club
@@ -592,11 +598,29 @@ form
     p
       float: none
       margin-bottom: 0
+
     .social
       float: none
       padding: 0
+
       li
         &:first-child
           padding: 0
 
+//Preloader
+#preload
+  position: fixed
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  background: #212121
+  z-index: 200
 
+.contpre
+  width: 100%
+  position: absolute
+  top: 45%
+  margin: 0 auto
+  text-align: center
+//Preloader end

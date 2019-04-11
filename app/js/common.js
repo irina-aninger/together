@@ -1,3 +1,10 @@
+//Preloader
+$(window).on('load', function () {
+    var $preloader = $('#preload');
+    $preloader.delay(600).fadeOut('slow');
+});
+//Preloader end
+
 onload = function () {
     var div = document.getElementById("banner");
     var header = document.getElementById("header");
@@ -53,14 +60,13 @@ $(document).ready(function () {
         }
     });
 
-    var mobileMenu = function() {
+    var mobileMenu = function () {
 
-        $('.mobile-menu').click(function() {
+        $('.mobile-menu').click(function () {
             if ($(this).hasClass('close')) {
                 $('header nav').animate({
                     right: '-180px'
                 }, 350);
-                //$('header nav').removeClass('open-header');
                 $(this).removeClass('close');
                 $('body').animate({
                     right: '0px'
@@ -85,11 +91,11 @@ $(document).ready(function () {
 //Animation
 wow = new WOW(
     {
-        boxClass:     'wow',      // default
-        animateClass: 'animated', // default
-        offset:       0,          // default
-        mobile:       true,       // default
-        live:         true        // default
+        boxClass: 'wow',
+        animateClass: 'animated',
+        offset: 0,
+        mobile: true,
+        live: true
     }
 );
 wow.init();

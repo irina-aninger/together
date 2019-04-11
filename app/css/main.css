@@ -150,11 +150,7 @@ h1 {
   font: 119px 'Times New Roman', sans-serif;
   letter-spacing: 0.06em;
   font-weight: bold;
-  margin: 0;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-name: fadeIn;
-          animation-name: fadeIn; }
+  margin: 0; }
 
 h2 {
   font-size: 46px;
@@ -250,11 +246,7 @@ footer {
     font: 19px 'Open Sans', sans-serif;
     letter-spacing: 0.45em;
     text-transform: uppercase;
-    margin-bottom: 50px;
-    -webkit-animation-duration: 5s;
-            animation-duration: 5s;
-    -webkit-animation-name: fadeIn;
-            animation-name: fadeIn; }
+    margin-bottom: 50px; }
 
 .button {
   background: #3DCAB3;
@@ -267,10 +259,7 @@ footer {
   transition: .4s;
   cursor: pointer;
   margin: 15px;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-name: fadeIn;
-          animation-name: fadeIn; }
+  position: relative; }
   .button:hover {
     background: #298879;
     color: #fff; }
@@ -329,7 +318,7 @@ footer {
         cursor: pointer; }
 
 #feedback {
-  background: #3e3b3b94 url(../img/feedback.jpg) no-repeat;
+  background: #3e3b3b 94 url(../img/feedback.jpg) no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
@@ -600,3 +589,19 @@ form button {
     padding: 0; }
     footer .social li:first-child {
       padding: 0; } }
+
+#preload {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #212121;
+  z-index: 200; }
+
+.contpre {
+  width: 100%;
+  position: absolute;
+  top: 45%;
+  margin: 0 auto;
+  text-align: center; }
