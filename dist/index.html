@@ -8,19 +8,42 @@
 
     <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/libs.css">
-
+    <link rel="stylesheet" href="libs/wow/css/libs/animate.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <meta name="theme-color" content="#fafafa">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
-    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-    <script src="js/plugins.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="libs/wow/dist/wow.js"></script>
     <script src="js/common.js"></script>
-    <script src="js/libs.min.js"></script>
+
+    <div id="preload">
+        <div class="contpre">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="25" viewBox="0 0 120 30" fill="#3eccb5"
+                 style="&#10;">
+                <circle cx="15" cy="15" r="10.5913">
+                    <animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15"
+                             calcMode="linear" repeatCount="indefinite"/>
+                    <animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1"
+                             calcMode="linear" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="60" cy="15" r="13.4087" fill-opacity="0.3">
+                    <animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear"
+                             repeatCount="indefinite"/>
+                    <animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5"
+                             calcMode="linear" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="105" cy="15" r="10.5913">
+                    <animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15"
+                             calcMode="linear" repeatCount="indefinite"/>
+                    <animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1"
+                             calcMode="linear" repeatCount="indefinite"/>
+                </circle>
+            </svg>
+        </div>
+    </div>
 
 </head>
 
@@ -31,20 +54,23 @@
 <![endif]-->
 
 <!-- Add your site or application content here -->
-<header>
+<header id="header">
     <div class="container">
         <div class="row">
-            <div class="logo">Вместе<span>.</span></div>
+            <div class="logo"><a href="/">Вместе<span>.</span></a></div>
             <nav>
                 <ul>
                     <li><a href="#banner">Главная</a></li>
                     <li><a href="#about">О нас</a></li>
                     <li><a href="#community">Сообщество</a></li>
                     <li><a href="#platform">Площадки</a></li>
-                    <li><a href="#">Клубная карта</a></li>
-                    <li><a href="#">Связаться</a></li>
+                    <li><a href="#club">Клубная карта</a></li>
+                    <li><a href="#feedback">Связаться</a></li>
                 </ul>
             </nav>
+            <div class="mobile-menu">
+                <div class="burger"></div>
+            </div>
         </div>
     </div>
 </header>
@@ -56,7 +82,7 @@
             <img src="img/banner.jpg" alt="banner"/>
             <div class="overlay">
                 <div class="row">
-                    <div class="banner-text">
+                    <div class="banner-text wow fadeIn" data-wow-delay="1s" data-wow-duration="2s">
                         <h1>Коворкинг</h1>
                         <p>Работайте вместе в хорошем месте</p>
                         <a class="button" href="">Подробнее</a>
@@ -71,8 +97,18 @@
             <div class="row">
                 <div class="about-text">
                     <h2>О нас</h2>
-                    <p>Хотите работать из офиса, но не готовы снимать для себя отдельное помещение? Чувствуете себя одиноко и не знаете, где найти ответы на возникающие в процессе работы вопросы? Отвлекаетесь на домашних животных, детей, жен или мужей? Переживаете о том, что ваша проектная команда дома и по отдельности будет работать гораздо хуже, чем вместе? Кажется, вам нужен коворкинг.</p>
-                    <p>Приходите к нам, вам понравится. Потрясающие офисы, переговорки и залы в стиле лофт, высокие окна, игровая комната, галерея и множество мероприятий ждут вас. С нами вы сможете чувствовать себя как дома: принести свои любимые тапочки, взять плед и завалиться на диван с кофе или же бороздить волны океана Wi-Fi в поисках новых смыслов. У нас есть все, что вам нужно, и даже больше: общий принтер, переговорные и тренинг-комнаты, конференц-зал и… и настощая дружба. Мы будем ради придти вам на помощь, объяснить, показать и рассказать все, что вам интересно. Мы рады проводить с вами дни и ночи напролет.</p>
+                    <p class="wow fadeInUp" data-wow-delay="0.5s">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                        parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+                        pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
+                        nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+                        Nullam dictum felis eu pede mollis pretium.</p>
+                    <p class="wow fadeInUp" data-wow-delay="1s">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                        parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+                        pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
+                        nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+                        Nullam dictum felis eu pede mollis pretium.</p>
                 </div>
             </div>
         </div>
@@ -82,43 +118,60 @@
         <div class="container">
             <div class="row">
                 <h2>Сообщество</h2>
-                <p>Это текст. Кликните дважды, чтобы отредактировать.<br>
-                    Расскажите посетителям сайта о себе.</p>
+                <p class="wow fadeInUp" data-wow-delay="0.5s">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+                    quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
+                    eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu
+                    pede mollis pretium.</p>
             </div>
         </div>
     </div>
 
-    <div id="gallery">
-        <div class="gallery-item"><img src="../img/slide_1.jpg"></div>
-        <div class="gallery-item"><img src="../img/slide_1.jpg"></div>
-        <div class="gallery-item"><img src="../img/slide_1.jpg"></div>
-        <div class="gallery-item"><img src="../img/slide_1.jpg"></div>
-        <div class="gallery-item"><img src="../img/slide_1.jpg"></div>
-        <div class="gallery-item"><img src="../img/slide_1.jpg"></div>
+    <div id="gallery" class="slider-galleri">
+        <div class="gallery-item"><img src="img/slide_1.jpg" alt="slide"></div>
+        <div class="gallery-item"><img src="img/slide_2.jpg" alt="slide"></div>
+        <div class="gallery-item"><img src="img/slide_3.jpg" alt="slide"></div>
+        <div class="gallery-item"><img src="img/slide_4.jpg" alt="slide"></div>
+        <div class="gallery-item"><img src="img/slide_5.jpeg" alt="slide"></div>
+        <div class="gallery-item"><img src="img/slide_6.jpg" alt="slide"></div>
     </div>
 
     <div id="platform" class="white">
         <div class="container">
             <div class="row">
                 <h2>Площадки</h2>
-                <p>Это текст. Кликните дважды, чтобы отредактировать.</p>
+                <p class="wow fadeInUp" data-wow-delay="0.5s">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+                    quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
+                    eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu
+                    pede mollis pretium.</p>
+                <p class="wow fadeInUp" data-wow-delay="1s">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+                    quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
+                    eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu
+                    pede mollis pretium.</p>
             </div>
         </div>
+    </div>
+    <div id="platform-items">
         <div class="plat-item">
-            <img src="../img/peregovor.jpg" alt="">
+            <img src="img/peregovor.jpg" alt="">
             <a class="hidden-desc" href=""><span>Open space</span></a>
         </div>
         <div class="plat-item">
-            <img src="../img/open_space.jpg" alt="">
-            <a class="hidden-desc" href=""></a>
+            <img src="img/open_space.jpg" alt="">
+            <a class="hidden-desc" href=""><span>Личный кабинет</span></a>
         </div>
         <div class="plat-item">
-            <img src="../img/ivent_space.jpg" alt="">
-            <a class="hidden-desc" href=""></a>
+            <img src="img/ivent_space.jpg" alt="">
+            <a class="hidden-desc" href=""><span>Ивент-площадка</span></a>
         </div>
         <div class="plat-item">
-            <img src="../img/peregovorka.jpg" alt="">
-            <a class="hidden-desc" href=""></a>
+            <img src="img/peregovorka.jpg" alt="">
+            <a class="hidden-desc" href=""><span>Переговорная</span></a>
         </div>
     </div>
 
@@ -126,24 +179,24 @@
         <div class="container">
             <div class="row">
                 <h2>Клубная карта</h2>
-                <p>Вступите в клуб и получите:</p>
+                <p class="wow fadeInUp" data-wow-delay="0.5s">Вступите в клуб и получите:</p>
                 <ul>
-                    <li>
+                    <li class="wow fadeInRight" data-wow-delay="1s">
                         <i class="fa fa-work"></i><span>Оборудованный рабочий стол</span>
                     </li>
-                    <li>
+                    <li class="wow fadeInRight" data-wow-delay="1s">
                         <i class="fa fa-int"></i><span>Интернет 2 ГБ</span>
                     </li>
-                    <li>
+                    <li class="wow fadeInRight" data-wow-delay="1s">
                         <i class="fa fa-speak"></i><span>Один час аренды переговорной бесплатно</span>
                     </li>
-                    <li>
+                    <li class="wow fadeInRight" data-wow-delay="1s">
                         <i class="fa fa-phone"></i><span>Безлимитные звонки за границу</span>
                     </li>
-                    <li>
+                    <li class="wow fadeInRight" data-wow-delay="1s">
                         <i class="fa fa-creat"></i><span>Доступ в сообщество креативных профессионалов</span>
                     </li>
-                    <li>
+                    <li class="wow fadeInRight" data-wow-delay="1s">
                         <i class="fa fa-party"></i><span>Бесплатный алкоголь каждую пятницу в 18:00</span>
                     </li>
                 </ul>
@@ -155,8 +208,10 @@
         <div class="container">
             <div class="row">
                 <h2>Как нас найти</h2>
-                <p>Адрес: ул. Арабат, 1а, Москва, Россия</p>
-                <p>т. <a href="tel:+7 123 456-78-90">+7 123 456-78-90</a> | <a href="mailto:info@mysite.ru">info@mysite.ru</a></p>
+                <p class="wow fadeInUp" data-wow-delay="0.5s">Адрес: ул. Арабат, 1а, Москва, Россия</p>
+                <p class="wow fadeInUp" data-wow-delay="1s">т. <a href="tel:+7 123 456-78-90">+7 123 456-78-90</a> |
+                    <a href="mailto:info@mysite.ru">info@mysite.ru</a>
+                </p>
                 <p>Подпишитесь на новости</p>
                 <form>
                     <input type="email" placeholder="Ваша эл. почта">
@@ -169,7 +224,8 @@
     </div>
 
     <div id="map">
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aaa4007e36f0cf8dea2d13ea09e7885f6b5bcc3e4309610d59c8532531a6a8998&amp;width=100%&amp;height=600&amp;lang=ru_RU&amp;scroll=false"></script>
+        <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aaa4007e36f0cf8dea2d13ea09e7885f6b5bcc3e4309610d59c8532531a6a8998&amp;width=100%&amp;height=600&amp;lang=ru_RU&amp;scroll=false"></script>
     </div>
 
 </section>
@@ -177,29 +233,22 @@
 <footer>
     <div class="container">
         <div class="row">
-            <p class="copyright">© 2019, Irina Petrushenko</p>
+            <p class="copyright wow slideInLeft" data-wow-delay="0.2s">© 2019, Irina Petrushenko</p>
             <ul class="social">
-                <li><a href="" class="vk"></a></li>
-                <li><a href="" class="tw"></a></li>
-                <li><a href="" class="fb"></a></li>
-                <li><a href="" class="gplus"></a></li>
-                <li><a href="" class="inst"></a></li>
+                <li class="wow slideInRight" data-wow-delay="0.2s"><a href="" class="vk"><img src="img/vk.webp" alt="social"></a>
+                </li>
+                <li class="wow slideInRight" data-wow-delay="0.4s"><a href="" class="tw"><img src="img/tw.webp" alt="social"></a>
+                </li>
+                <li class="wow slideInRight" data-wow-delay="0.6s"><a href="" class="fb"><img src="img/fb.webp" alt="social"></a>
+                </li>
+                <li class="wow slideInRight" data-wow-delay="0.8s"><a href="" class="gplus"><img src="img/gp.webp" alt="social"></a>
+                </li>
+                <li class="wow slideInRight" data-wow-delay="1s"><a href="" class="inst"><img src="img/inst.webp" alt="social"></a>
+                </li>
             </ul>
         </div>
     </div>
 </footer>
 
-
-<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-<script>
-    window.ga = function () {
-        ga.q.push(arguments)
-    };
-    ga.q = [];
-    ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto');
-    ga('send', 'pageview')
-</script>
-<script src="https://www.google-analytics.com/analytics.js" async defer></script>
 </body>
 </html>

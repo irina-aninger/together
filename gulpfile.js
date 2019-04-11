@@ -31,8 +31,9 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 
 gulp.task('scripts', function() {
     return gulp.src([ // Берем все необходимые библиотеки
-        'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js', // Берем Magnific Popup
-        'app/libs/owl-carousel/dist/owl-carousel.js' // Берем Owl Carousel
+        'app/libs/jquery/dist/jquery.js', // Берем JQuery
+        'app/libs/slick-carousel/slick/slick.min.js', // Берем Slick
+        'app/libs/wow/dist/wow.min.js' // Берем WOW
     ])
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
         .pipe(uglify()) // Сжимаем JS файл
@@ -45,7 +46,13 @@ gulp.task('code', function() {
 });
 
 gulp.task('css-libs', function() {
-    return gulp.src('app/css/*.css') // Выбираем файл для минификации
+    return gulp.src([ // Берем все необходимые библиотеки
+        'app/libs/jquery/dist/jquery.js', // Берем JQuery
+        'app/libs/slick-carousel/slick/slick.css', // Берем Slick
+        'app/libs/wow/css/libs/animate.css', // Берем WOW
+        'app/libs/wow/css/site.css' // Берем WOW
+    ])
+        .pipe(concat('libs.css')) // Собираем их в кучу в новом файле libs.min.css
         .pipe(cssnano()) // Сжимаем
         .pipe(gulp.dest('app/css')); // Выгружаем в папку app/css
 });
@@ -70,7 +77,7 @@ gulp.task('prebuild', async function() {
 
     var buildCss = gulp.src([ // Переносим библиотеки в продакшен
         'app/css/main.css',
-        'app/css/libs.min.css'
+        'app/css/libs.css'
     ])
         .pipe(gulp.dest('dist/css'))
 
