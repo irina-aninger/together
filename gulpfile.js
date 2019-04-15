@@ -47,10 +47,8 @@ gulp.task('code', function() {
 
 gulp.task('css-libs', function() {
     return gulp.src([ // Берем все необходимые библиотеки
-        'app/libs/jquery/dist/jquery.js', // Берем JQuery
         'app/libs/slick-carousel/slick/slick.css', // Берем Slick
-        'app/libs/wow/css/libs/animate.css', // Берем WOW
-        'app/libs/wow/css/site.css' // Берем WOW
+        'app/libs/wow/css/libs/animate.css' // Берем WOW
     ])
         .pipe(concat('libs.css')) // Собираем их в кучу в новом файле libs.min.css
         .pipe(cssnano()) // Сжимаем

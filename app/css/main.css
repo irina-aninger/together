@@ -605,3 +605,6 @@ form button {
   top: 45%;
   margin: 0 auto;
   text-align: center; }
+  .contpre img {
+    width: 100px;
+    height: 25px; }
