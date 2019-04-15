@@ -1,35 +1,7 @@
-/*! HTML5 Boilerplate v7.0.1 | MIT License | https://html5boilerplate.com/
-
-/* main.css 1.0.0 | MIT License | https://github.com/h5bp/main.css#readme
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
-
-/* ==========================================================================
- * Base styles: opinionated defaults
- * ==========================================================================
-
 html
   color: #222
   font-size: 1em
   line-height: 1.4
-
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
-
-\::selection
-  background: #b3d4fc
-  text-shadow: none
-
-/*
- * A better looking default horizontal rule
 
 hr
   display: block
@@ -39,28 +11,19 @@ hr
   margin: 1em 0
   padding: 0
 
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
-
 audio, canvas, iframe, img, svg, video
   vertical-align: middle
-
-/*
- * Remove default fieldset styles.
 
 fieldset
   border: 0
   margin: 0
   padding: 0
 
-/*
- * Allow only vertical resizing of textareas.
-
 textarea
   resize: vertical
 
+::-webkit-input-placeholder
+  color:#fff
 
 body
   &::-webkit-scrollbar
@@ -587,7 +550,28 @@ form
   .row
     width: auto
   h1
-    font: 52px 'Times New Roman', sans-serif
+    font: 49px 'Times New Roman', sans-serif
+  #banner
+    .banner-text
+      p
+        font: 16px 'Open Sans', sans-serif
+        letter-spacing: 0.2em
+  .about-text
+    width: 90%
+    padding: 15px
+  h2
+    font-size: 32px
+  #platform-items
+    .plat-item
+      img
+        position: absolute
+        top: -50%
+
+  form
+    overflow: hidden
+    .button
+      margin: 15px 0px 0px 0px
+
   #club
     ul
       column-count: 1
